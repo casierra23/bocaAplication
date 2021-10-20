@@ -19,7 +19,9 @@
         $( document ).ready(function() {
             $( "#login" ).click(function() {
                 if($( "#user" ).val() == 'BOCA' && $( "#pass" ).val() == 'admin'){
-                    $(location).prop('href', '/Dashboard.html');
+                    window.location.href = "Dashboard.html";
+                    window.location.replace('Dashboard.html');  
+                    $(location).prop('href', 'Dashboard.html');
                 }else{
                     alert( "Usuario y contraseña incorrecta");
                 }
