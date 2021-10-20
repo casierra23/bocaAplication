@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>BOCA Login</title>
+    <link href="css/login.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+    <script>
+        $( document ).ready(function() {
+            $( "#login" ).click(function() {
+                if($( "#user" ).val() == 'BOCA' && $( "#pass" ).val() == 'admin'){
+                    $(location).prop('href', '/Dashboard.html');
+                }else{
+                    alert( "Usuario y contraseña incorrecta");
+                }
+                
+             });
+        });
+    </script>
+</head>
+<body class="bg-primary">
+
+<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <form class="login">
+        <div class="login__field">
+          <i class="login__icon fas fa-user"></i>
+          <input type="text" id="user" class="login__input" placeholder="User name / Email">
+        </div>
+        <div class="login__field">
+          <i class="login__icon fas fa-lock"></i>
+          <input type="password" id="pass" class="login__input" placeholder="Password">
+        </div>
+        <button class="button login__submit" id="login">
+          <span class="button__text" >LOGIN </span>
+          <i class="button__icon fas fa-chevron-right"></i>
+        </button>       
+      </form>
+      <div class="social-login">
+        <h3>BOCA APP</h3>
+      </div>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>    
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>    
+  </div>
+</div>
+
+</body>
+</html>
